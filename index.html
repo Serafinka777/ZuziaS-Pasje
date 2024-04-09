@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Moje pasje</title>
+
+</head>
+
+<body>
+
+
+    <nav>
+        <a href="./sport.html">SPORT</a>
+        <a href="./malowanie.html">MALOWANIE</a>
+        <a href="./gotowanie.html">GOTOWANIE</a>
+    </nav>
+
+    <div class="container">
+        <div class="title">MOJE PASJE:</div>
+        <div class="hobbies-list">
+            <a href="./sport.html" class="my-hobbie">
+                <img src="./hobbie1.jpg">
+                <div>
+                    SPORT
+                </div>
+            </a>
+            <a href="./malowanie.html" class="my-hobbie">
+                <img src="./hobbie2.jpeg">
+                <div>
+                    MALOWANIE
+                </div>
+            </a>
+            <a href="./gotowanie.html" class="my-hobbie">
+                <img src="./hobbie3.jpg">
+                <div>
+                    GOTOWANIE
+                </div>
+            </a>
+        </div>
+        <div id="currentDateTime" class="title"></div>
+    </div>
+
+    <script>
+        // Pobierz element, który będzie wyświetlał datę i godzinę
+        const dateTimeDisplay = document.getElementById('currentDateTime');
+
+        // Funkcja, która aktualizuje datę i godzinę co sekundę
+        function updateDateTime() {
+            const currentDate = new Date();
+            dateTimeDisplay.textContent = 'Aktualna data i godzina: ' + currentDate.toLocaleString();
+        }
+
+        // Wywołaj funkcję raz na starcie, aby wyświetlić aktualną datę i godzinę
+        updateDateTime();
+
+        // Odświeżaj datę i godzinę co sekundę
+        setInterval(updateDateTime, 1000);
+    </script>
+
+    <footer>
+        &copy; 2024 Zuzia Serafin
+    </footer>
+</body>
+
+</html>
